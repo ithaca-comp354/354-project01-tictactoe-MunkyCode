@@ -26,6 +26,7 @@ public class TicTacToeGame {
         else {
             turn='O';
         }
+        turn='X';
     }
 
     public TicTacToeGame (TicTacToePlayer xPlayer, TicTacToePlayer oPlayer){
