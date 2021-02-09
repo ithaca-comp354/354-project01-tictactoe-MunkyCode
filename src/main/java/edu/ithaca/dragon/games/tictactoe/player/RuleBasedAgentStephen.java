@@ -4,7 +4,7 @@ import org.javatuples.Pair;
 
 import edu.ithaca.dragon.games.tictactoe.board.TicTacToeBoard;
 
-public class RuleBaseAgent implements TicTacToePlayer {
+public class RuleBasedAgentStephen implements TicTacToePlayer {
 
 	@Override
 	public Pair<Integer, Integer> chooseSquare(TicTacToeBoard curBoard, char yourSymbol) {//TODO: Write a function to block 0,1 , 1,0 placemnet
