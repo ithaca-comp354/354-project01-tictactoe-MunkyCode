@@ -7,7 +7,7 @@ import edu.ithaca.dragon.games.tictactoe.board.TicTacToeBoard;
 public class RuleBasedAgentStephen implements TicTacToePlayer {
 
 	@Override
-	public Pair<Integer, Integer> chooseSquare(TicTacToeBoard curBoard, char yourSymbol) {//TODO: Write a function to block 0,1 , 1,0 placemnet
+	public Pair<Integer, Integer> chooseSquare(TicTacToeBoard curBoard, char yourSymbol) {
         if(boardEmpty(curBoard)) return new Pair<>(0,0);
         String[] board = curBoard.buildSquaresString().split("");
         int numYou = countSymbol(board, ""+yourSymbol);
@@ -23,7 +23,7 @@ public class RuleBasedAgentStephen implements TicTacToePlayer {
         if(win != null) return win;
         Pair<Integer, Integer> block = blockLocation(board);
         if(block != null) return block;
-        if(countSymbol(board, ""+yourSymbol) == 1 && countSymbol(board, "=") == 3){
+        if(countSymbol(board, ""+yourSymbol) == 1 && countSymbol(board, "=") == 3 && board[4].equals(""+yourSymbol)){
             if((board[0].equals(oppSym) && board[8].equals(oppSym))||(board[2].equals(oppSym) && board[6].equals(oppSym))){
                 if(board[4].equals(""+yourSymbol)){
                     return new Pair<>(1,0);
